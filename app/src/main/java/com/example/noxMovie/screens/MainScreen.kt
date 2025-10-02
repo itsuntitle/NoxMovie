@@ -2,6 +2,7 @@ package com.example.noxMovie.screens
 
 import MovieScreen
 import android.annotation.SuppressLint
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -210,16 +211,22 @@ class MainScreen : Screen {
 
 
                         MovieCardList(list = moviesListStates!!) { search, index ->
-                            val url = movieUrls[index]
-                            naviagtor.push(
-                                MovieScreen(
-                                    url,
-                                    search.Poster,
-                                    search.Title!!,
-                                    movieDes[index].second,
-                                    actors = movieActors[index].joinToString(", ")
+                            if (index < movieUrls.size && index < movieDes.size && index < movieActors.size) {
+                                val url = movieUrls[index]
+                                naviagtor.push(
+                                    MovieScreen(
+                                        url,
+                                        search.Poster,
+                                        search.Title!!,
+                                        movieDes[index].second,
+                                        actors = movieActors[index].joinToString(", ")
+                                    )
                                 )
-                            )
+                            } else {
+                                Toast.makeText(context, "اطلاعات این فیلم موجود نیست", Toast.LENGTH_SHORT).show()
+                            }
+
+
                         }
 
 
