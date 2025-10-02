@@ -133,7 +133,7 @@ class MainScreen : Screen {
 
             LaunchedEffect(Unit) {
                 while (true) {
-                    delay(5000) // 5 ثانیه
+                    delay(5000) // 5 seconds
                     val count = moviesListStates?.size ?: 0
                     if (count > 0) {
                         val next = (pager.currentPage + 1) % count

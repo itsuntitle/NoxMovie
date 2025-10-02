@@ -19,7 +19,7 @@ class TabsScreen : Screen {
 }
 
 
-// تب Home
+// Home tab
 object HomeTab : Tab {
     @Composable
     override fun Content() {

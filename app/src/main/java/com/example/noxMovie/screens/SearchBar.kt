@@ -41,7 +41,7 @@ fun SearchBar(
     val isDark = isSystemInDarkTheme()
     val selectedColor = MaterialTheme.colorScheme.primary
 
-// رنگ متن و پس‌زمینه بر اساس دارک یا لایت مود
+// change the color based on the system color
     val textColor = if (isDark) Color.White else Color.Gray
     val containerColor = if (isDark) Color.DarkGray.copy(alpha = 0.1f) else Color.LightGray.copy(alpha = 0.1f)
     Column(modifier = Modifier.padding(5.dp)) {
@@ -66,7 +66,7 @@ fun SearchBar(
                         historySearch.add(text)
                     }
                     Hawk.put("savedwords", historySearch)
-                    savedWordsState = historySearch  // ← بروزرسانی state مهمه
+                    savedWordsState = historySearch
                     onSavedItemClicked(text)
                 }
             ),
