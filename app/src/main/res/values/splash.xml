@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash Theme برای نسخه‌های قدیمی -->
+    <style name="Theme.NoxMovie.Starting" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">#202020</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
