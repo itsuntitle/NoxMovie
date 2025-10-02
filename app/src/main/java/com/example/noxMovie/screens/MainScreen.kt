@@ -127,7 +127,7 @@ class MainScreen : Screen {
 
 
             LaunchedEffect(Unit) {
-                moviesListStates = apiMainMovieCall(context = context)
+                moviesListStates = apiMainMovieCall()
                 posterMovie = apiPosterMovieCall()
             }
 
